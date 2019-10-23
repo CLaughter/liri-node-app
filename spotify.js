@@ -1,12 +1,12 @@
 // Require environment variable configuration
 require('dotenv').config()
-var spotify = require('spotify');
+var Spotify = require('node-spotify-api');
 // Import keys file
 var keys = require('./keys.js');
 // Require data from File System npm pkg
 var fs = require('fs');
-// Access spotify keys information
-var spotify = spotify(keys.spotify);
+// Fetch spotify keys
+var spotifyClient = new Spotify(keys.spotify);
 
 // If no song input then default
 function mySpotify(userInput) {
@@ -18,7 +18,7 @@ function mySpotify(userInput) {
     song = "The Sign by Ace of Base"
   }
 
-    spotify.search( { 
+    spotifyClient.search( { 
       type: 'track', 
       query: song 
     }, function(err, data) {
@@ -44,4 +44,4 @@ fs.appendFileSync('log.txt', "\r\n" + "---------------------------------------" 
 }
 
 // Exporting function used in liri.js
-module.exports = mySpotify
+module.exports = mySpotify;

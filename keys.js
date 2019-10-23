@@ -9,7 +9,7 @@ module.exports.movies = {
   OMDB: process.env.OMDBkey
 }
 
-module.exports.concert {
+module.exports.concert = {
   BIT: process.env.BITkey
 }
  
