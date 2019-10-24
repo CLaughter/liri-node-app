@@ -4,7 +4,7 @@ While SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Lang
 
 This is a Command-Line-Interface (CLI) Node Application that takes in parameters and gives back data.
 
-Retrieving the data that will power this app is accomplished by sending requests using the `axios` package to search APIs of Bands in Town for concerts and Open Movie Database for movies, as well as the Spotify node API for songs,
+Retrieving the data that will power this app is accomplished by sending requests using the `axios` package to search APIs of bandsintown for concerts and Open Movie Database for movies, as well as the Spotify node API for songs.
 
 This makes an easy to use format to quickly return desired information withing the scope of the given parameters.
 
