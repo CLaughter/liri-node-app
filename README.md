@@ -19,16 +19,25 @@ This makes an easy to use format to quickly return desired information withing t
 #### to display random.txt data from liri.js switch
 
 The app code initiates in the liri.js file and requires module exports for movies, concert and spotify functions returning the desired information.
+
 API keys are stored in environment variables and fetched by requiring information in the keys file. 
+
 Specific code for given API calls are contained in individual files and exported for use by the LIRI file determined by switch/case based on user input at the command line. 
+
 Requests are sent via Axios url or Spotify queries based on predefined parameters.
+
 BandsInTown utilizes moment.js for time and date reference.
+
 All data is formated to return and display in the log.txt as well as the console.
+
 A Help command provides user guidance.
+
 The text in random.txt is used by LIRI to call a command with *fs* Node package.
+
 In the event a user does not specify a move title, song or artist, the app will default to a given output.
 
-CLaughter developed this app as a coding bootcamp assignment.
+Laughter developed this app as a coding bootcamp assignment.
+
 Link to project: 
 
 The screenshot below shows the app in action.
