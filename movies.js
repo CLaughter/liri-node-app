@@ -1,8 +1,8 @@
 // Require environment variable configuration
 require('dotenv').config()
-// Import keys file
+// Fetch OMDB key
 var keys = require('./keys.js');
-// Require data from File System npm pkg
+// Require File System npm pkg
 var fs = require('fs');
 // Require Axios npm pkg for url query
 var axios = require("axios");
@@ -16,6 +16,7 @@ function myMovie(userInput) {
     movie = "Mr. Nobody"
   }
 
+  // API request
 var url = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + keys.movies.OMDB;
 
 // Return desired information
@@ -66,6 +67,8 @@ axios.get(url).then(
     }
     console.log(error.config);
   })
-};
+  
+  console.log("movie.txt was updated!");
+
 // Exporting function used in liri.js
 module.exports = myMovie;

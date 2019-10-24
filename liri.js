@@ -20,15 +20,15 @@ switch(command1) {
   // Help function to clarify commands used
   case "help":
     console.log('Please type one of these commands without ""\n' +
-    'concert-this "your band" to search for an artist in town\n' +
-    'spotify-this-song "your song" to search for a song\n' +
-    'movie-this "your movie" to search for a movie\n' +
-    'do-what-it-says using command from random.txt\n'
+    'node liri.js concert-this "your band" to search for an artist in town\n' +
+    'node liri.js spotify-this-song "your song" to search for a song\n' +
+    'node liri.js movie-this "your movie" to search for a movie\n' +
+    'node liri.js do-what-it-says\n'
     )
   break;
 
   case 'movie-this':
-    myMovies(command2)
+    myMovie(command2)
   break;
 
   case 'concert-this':
