@@ -36,7 +36,7 @@ The text in random.txt is used by LIRI to call a command with *fs* Node package.
 
 In the event a user does not specify a move title, song or artist, the app will default to a given output.
 
-Laughter developed this app as a coding bootcamp assignment.
+CLaughter developed this app as a coding bootcamp assignment.
 
 Link to project: 
 
