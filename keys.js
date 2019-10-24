@@ -12,5 +12,3 @@ module.exports.movies = {
 module.exports.concert = {
   BIT: process.env.BITkey
 }
- 
-

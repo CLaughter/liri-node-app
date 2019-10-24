@@ -4,9 +4,9 @@ While SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Lang
 
 This is a Command-Line-Interface (CLI) Node Application that takes in parameters and gives back data.
 
-Retrieving the data that will power this app is accomplished by sending requests using the `axios` package to search APIs of bandsintown for concerts and Open Movie Database for movies, as well as the Spotify node API for songs.
+Retrieving the data that will power this app is accomplished by sending requests using the `axios` package to search APIs of bandsintown for concerts,Open Movie Database for movies, as well as the Spotify node API for songs.
 
-This makes an easy to use format to quickly return desired information withing the scope of the given parameters.
+This makes an easy to use format to quickly return desired information within the scope of the given parameters.
 
 ## Here is how to type into the terminal after it is opened:
 ### node liri.js movie-this movie name
@@ -20,7 +20,9 @@ This makes an easy to use format to quickly return desired information withing t
 
 The app code initiates in the liri.js file and requires module exports for movies, concert and spotify functions returning the desired information.
 
-API keys are stored in environment variables and fetched by requiring information in the keys file. 
+API keys are stored in environment variables with the dotenv package and fetched by requiring information in the keys file for module exports. 
+
+One would need to supply their own `.env` file for the app to work if they copied this app code.
 
 Specific code for given API calls are contained in individual files and exported for use by the LIRI file determined by switch/case based on user input at the command line. 
 
@@ -38,6 +40,4 @@ In the event a user does not specify a move title, song or artist, the app will 
 
 CLaughter developed this app as a coding bootcamp assignment.
 
-Link to project: 
-
-The screenshot below shows the app in action.
+Link to project: https://github.com/CLaughter/liri-node-app.git

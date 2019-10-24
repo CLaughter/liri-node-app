@@ -1,11 +1,11 @@
 // Require environment variable configuration
 require('dotenv').config()
 var Spotify = require('node-spotify-api');
-// Fetch spotify keys
+// Import keys file file for module exports
 var keys = require('./keys.js');
-// Require File System npm pkg
+// Require data from File System npm pkg
 var fs = require('fs');
-// spotify 
+// Access spotify keys information
 var spotifyClient = new Spotify(keys.spotify);
 
 // If no song input then default
@@ -18,7 +18,6 @@ function mySpotify(userInput) {
     song = "The Sign by Ace of Base"
   }
 
-  // API request
     spotifyClient.search( { 
       type: 'track', 
       query: song 

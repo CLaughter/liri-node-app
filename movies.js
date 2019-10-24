@@ -1,8 +1,8 @@
 // Require environment variable configuration
 require('dotenv').config()
-// Fetch OMDB key
+// Import keys file for module exports
 var keys = require('./keys.js');
-// Require File System npm pkg
+// Require data from File System npm pkg
 var fs = require('fs');
 // Require Axios npm pkg for url query
 var axios = require("axios");
@@ -16,7 +16,6 @@ function myMovie(userInput) {
     movie = "Mr. Nobody"
   }
 
-  // API request
 var url = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + keys.movies.OMDB;
 
 // Return desired information
@@ -36,15 +35,16 @@ axios.get(url).then(
     console.log("--------------------------\n")
 
   // Add text to log.txt 
-    fs.appendFileSync('log.txt', "\r\n" + "Movie Search Log-----------------------" + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Year: " + response.data.Year  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "IMDB Rating: " + response.data.imdbRating  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Rotten Tomatoes: " + response.data.Ratings[0].Value  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Country: " + response.data.Country  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Language: " + response.data.Language  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Plot: " + response.data.Plot  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "Actors: " + response.data.Actors  + "\r\n", 'utf8');
-    fs.appendFileSync('log.txt', "\r\n" + "---------------------------------------"  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Movie Search Log-----------------------" + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Title: " + response.data.Title  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Year: " + response.data.Year  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "IMDB Rating: " + response.data.imdbRating  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Rotten Tomatoes: " + response.data.Ratings[0].Value  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Country: " + response.data.Country  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Language: " + response.data.Language  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Plot: " + response.data.Plot  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "Actors: " + response.data.Actors  + "\r\n", 'utf8');
+    fs.appendFileSync('movies.txt', "\r\n" + "---------------------------------------"  + "\r\n", 'utf8');
   })
 
   .catch(function(error) {
@@ -67,8 +67,6 @@ axios.get(url).then(
     }
     console.log(error.config);
   })
-  
-  console.log("movie.txt was updated!");
-
+};
 // Exporting function used in liri.js
 module.exports = myMovie;
