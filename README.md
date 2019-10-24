@@ -8,35 +8,27 @@ Retrieving the data that will power this app is accomplished by sending requests
 
 This makes an easy to use format to quickly return desired information withing the scope of the given parameters.
 
-Here is how to type into the terminal
-* node liri.js movie-this movie name
-  * to search for a movie
-* node liri.js concert-this artist/band name
-  * to search for artist concerts
-* node liri.js spotify-this-song song name
-  * to search for a song
-* node liri.js (then do-what-it-says)
-  * using command from random.txt
+## Here is how to type into the terminal after it is opened:
+### node liri.js movie-this movie name
+#### to search for a movie
+### node liri.js concert-this artist/band name
+#### to search for artist concerts
+### node liri.js spotify-this-song song name
+#### to search for a song
+### node liri.js then do-what-it-says
+#### to display random.txt data from liri.js switch
 
-The app code initiates in the liri.js file. API keys are stored in environment variables and fetched utilizing require to input the information in the keys file. 
-All code for a given API call is contained in it's own file and exported for use by the liri file switch/case based on user input at the command line. The app then
-sends requests via Axios url or Spotify searches based on predefined parameters. All data is formated to return and display in the console as well as log.txt
-In the event a user does
-not specify a move title, the app will default to a given output.
-3. Start to finish steps on how to run the app
-4. Include screenshots, gifs or videos of the app functioning
-5. Contain a link to a deployed version of the app
-6. Clearly list the technologies used in the app
-7. State your role in the app development
+The app code initiates in the liri.js file and requires module exports for movies, concert and spotify functions returning the desired information.
+API keys are stored in environment variables and fetched by requiring information in the keys file. 
+Specific code for given API calls are contained in individual files and exported for use by the LIRI file determined by switch/case based on user input at the command line. 
+Requests are sent via Axios url or Spotify queries based on predefined parameters.
+BandsInTown utilizes moment.js for time and date reference.
+All data is formated to return and display in the log.txt as well as the console.
+A Help command provides user guidance.
+The text in random.txt is used by LIRI to call a command with *fs* Node package.
+In the event a user does not specify a move title, song or artist, the app will default to a given output.
 
-If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+CLaughter developed this app as a coding bootcamp assignment.
+Link to project: 
 
-
-
-4. `node liri.js do-what-it-says`
-
-Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
-It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-
-Edit the text in random.txt to test out the feature for movie-this and concert-this.
+The screenshot below shows the app in action.
