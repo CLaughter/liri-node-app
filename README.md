@@ -2,9 +2,9 @@
 
 While SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface.
 
-This is a Command-Line-Interface (CLI) Node Application that takes in parameters and gives back data.
+This is a Command-Line-Interface (CLI) Node Application that takes in user input and gives back data.
 
-Retrieving the data that will power this app is accomplished by sending requests using the `axios` package to search APIs of bandsintown for concerts,Open Movie Database for movies, as well as the Spotify node API for songs.
+Retrieving the data that will power this app is accomplished by sending requests using the `axios` npm package to search APIs of bandsintown for concerts, Open Movie Database for movies, as well as the Spotify node API for songs.
 
 This makes an easy to use format to quickly return desired information within the scope of the given parameters.
 
@@ -30,7 +30,7 @@ Requests are sent via Axios url or Spotify queries based on predefined parameter
 
 BandsInTown utilizes moment.js for time and date reference.
 
-All data is formated to return and display in the log.txt as well as the console.
+All data is formated to return and display in the log.txt, concert.txt and movies.txt as well as the console.
 
 A Help command provides user guidance.
 
