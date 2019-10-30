@@ -40,6 +40,6 @@ In the event a user does not specify a move title, song or artist, the app will 
 
 CLaughter developed this app as a coding bootcamp assignment.
 
-Link to project: https://github.com/CLaughter/liri-node-app.git
+Link to project code: https://github.com/CLaughter/liri-node-app.git
 
 YouTube Link: https://youtu.be/IObVgI5Hkgw
